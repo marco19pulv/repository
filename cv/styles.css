@@ -1,0 +1,62 @@
+img {
+    max-width: 100%; }
+.img-object { 
+    float: left;
+    width: 15px;
+    margin-right: 1rem;
+    margin-top: 1rem; }
+
+.h4-name, .h5-prof {
+    margin-bottom: 0rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold; }
+.h5-object, .h6-subject {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0rem; }
+.h6-year { 
+    display: inline-block;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+    color: #8B857E; }
+
+.row {
+    background-color: #FCF9F5;
+}
+
+
+.container {
+    background-color: #FEFDFC;
+    margin-top: 1%;
+}
+
+p {
+    margin-bottom: 0rem; }
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid #F4E8DC;
+}
+
+#first-column, #second-column {
+    padding: 1rem;
+}
+
+.first-column-box {
+    border: 1px solid #F4E8DC;
+    margin-top: 1rem;
+    background-color: #FDFBF9;
+}
+
+#profile {
+    padding: 0.5rem;
+    background-color: #F4E8DC;
+}
+
+.div-portrait {
+    display: flex;
+    justify-content: center;
+}
