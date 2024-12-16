@@ -15,8 +15,8 @@
   box-sizing: border-box;
   padding: 1rem; }
 
-/* For devices larger than 800px */
-@media (min-width: 800px) {
+/* For devices larger than 888px */
+@media (min-width: 768px) {
   .one.columns    { width: 8.333333333%; }
   .two.columns    { width: 16.666666666%; }
   .three.columns  { width: 25%; }
@@ -39,8 +39,8 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html { font-size: 62.5%; }
 
 body {
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 1.4rem;
+  line-height: 1.4;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
@@ -51,11 +51,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300; }
 
 h1 { font-size: 5.0rem; }
-h2 { font-size: 4.1rem; }
-h3 { font-size: 3.3rem; }
-h4 { font-size: 2.9rem; }
-h5 { font-size: 1.9rem; }
-h6 { font-size: 1.5rem; }
+h2 { font-size: 4.0rem; }
+h3 { font-size: 3.2rem; }
+h4 { font-size: 2.6rem; }
+h5 { font-size: 1.8rem; }
+h6 { font-size: 1.4rem; }
 
 p { margin: 0 1rem; }
 
@@ -72,7 +72,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 38px;
+  height: 100%;
   padding: 0 30px;
   color: #555;
   text-align: center;
@@ -164,46 +164,54 @@ img { max-width: 100%; }
 .h5-object-inline {
   display: inline-block;
   font-weight: bold;  }
-.h6-subject-skills,
+.h6-subject-minor-missing-skills,
 .h6-subject-empl,
 .h6-subject-educ,
 .h6-subject-proj,
 .h6-subject-train,
 .h6-subject-activ {
-  display: inline-block;
+  display: inline-flex;
   font-weight: normal; 
   padding-top: 0.5rem; }
 .h6-year {
-  display: inline-block;
+  display: inline-flex;
   margin-right: 1rem;
   color: #8B857E; }
 
 .row { background-color: #FCF9F5; }
 
 .first-column-div {
+
   border: 1px solid #F4E8DC;
   padding: 0rem 0.5rem 0.25rem;
   margin-top: 0.5rem;
   background-color: #FDFBF9; }
 
-#div-img-portrait {
+#img-portrait {
   display: flex;
   justify-content: center; }
 
-#div-portrait {
+#portrait {
   padding: 0.5rem;
   background-color: #F4E8DC; }
 
+.redir {
+  margin-left: 0.5rem;
+}
+
+.toggleShow {
+  height: 20px; }
+
 /* ----- SKILLS ----- */
 /* Improve cursor for clickable items */
-.h6-subject-skills {
+.h6-subject-minor-missing-skills {
   cursor: pointer;
   padding: 0rem 0;
   /* Optional: add some padding for better clickability */
   transition: background-color 0.3s ease;
   /* Smooth transition for background change */ }
 /* Hide the <ul> elements by default, using opacity and max-height */
-.h6-subject-skills+ul {
+.h6-subject-minor-missing-skills+ul {
   display: block;
   /* Maintain block display to preserve space */
   opacity: 0;
@@ -215,8 +223,8 @@ img { max-width: 100%; }
   transition: opacity 0.3s ease, max-height 0.3s ease;
   /* Smooth transitions */ }
 /* Display the <ul> when the h6-subject is hovered or active */
-.h6-subject-skills:hover+ul,
-.h6-subject-skills.active+ul {
+.h6-subject-minor-missing-skills:hover+ul,
+.h6-subject-minor-missing-skills.active+ul {
   opacity: 1;
   /* Make it visible */
   max-height: 1000px;
