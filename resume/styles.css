@@ -172,7 +172,7 @@ img { max-width: 100%; }
 .h6-subject-activ {
   display: inline-block;
   font-weight: normal; 
-  margin-top: 0.33rem; }
+  padding-top: 0.5rem; }
 .h6-year {
   display: inline-block;
   margin-right: 1rem;
@@ -182,7 +182,7 @@ img { max-width: 100%; }
 
 .first-column-div {
   border: 1px solid #F4E8DC;
-  padding: 0.5rem;
+  padding: 0rem 0.5rem 0.25rem;
   margin-top: 0.5rem;
   background-color: #FDFBF9; }
 
@@ -194,16 +194,16 @@ img { max-width: 100%; }
   padding: 0.5rem;
   background-color: #F4E8DC; }
 
+/* ----- SKILLS ----- */
 /* Improve cursor for clickable items */
-.first-column-div .h6-subject-skills {
+.h6-subject-skills {
   cursor: pointer;
-  padding: 0.25rem 0;
+  padding: 0rem 0;
   /* Optional: add some padding for better clickability */
   transition: background-color 0.3s ease;
   /* Smooth transition for background change */ }
-
 /* Hide the <ul> elements by default, using opacity and max-height */
-.first-column-div .h6-subject-skills+ul {
+.h6-subject-skills+ul {
   display: block;
   /* Maintain block display to preserve space */
   opacity: 0;
@@ -212,14 +212,11 @@ img { max-width: 100%; }
   /* Initially collapsed */
   overflow: hidden;
   /* Hide content that overflows */
-  list-style-type: none;
-  margin: 0;
   transition: opacity 0.3s ease, max-height 0.3s ease;
   /* Smooth transitions */ }
-
 /* Display the <ul> when the h6-subject is hovered or active */
-.first-column-div .h6-subject-skills:hover+ul,
-.first-column-div .h6-subject-skills.active+ul {
+.h6-subject-skills:hover+ul,
+.h6-subject-skills.active+ul {
   opacity: 1;
   /* Make it visible */
   max-height: 1000px;
