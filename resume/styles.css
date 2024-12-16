@@ -15,8 +15,22 @@
   box-sizing: border-box;
   padding: 1rem; }
 
-/* For devices larger than 888px */
+#img-profile { display: none; }
+.left-column-div {
+  display: none;
+  border: 1px solid #F4E8DC;
+  padding: 0rem 0.5rem 0.25rem;
+  margin-top: 0.5rem;
+  background-color: #FDFBF9; }
+#portrait { display: block; }
+#profile {
+  display: block;
+  text-align: center; }
+
+/* For devices larger than 768px */
 @media (min-width: 768px) {
+  .left-column-div, #img-profile { display: block; }
+  #profile        { text-align: left; }
   .one.columns    { width: 8.333333333%; }
   .two.columns    { width: 16.666666666%; }
   .three.columns  { width: 25%; }
@@ -153,7 +167,7 @@ img { max-width: 100%; }
   float: left;
   width: 15px;
   margin-right: 1rem;
-  margin-top: 0.66rem; }
+  margin-top: 0.5rem; }
 
 .h4-fullname,
 .h5-portrait {
@@ -164,7 +178,7 @@ img { max-width: 100%; }
 .h5-object-inline {
   display: inline-block;
   font-weight: bold;  }
-.h6-subject-minor-missing-skills,
+.h6-subject-minor-skills,
 .h6-subject-empl,
 .h6-subject-educ,
 .h6-subject-proj,
@@ -180,13 +194,6 @@ img { max-width: 100%; }
 
 .row { background-color: #FCF9F5; }
 
-.first-column-div {
-
-  border: 1px solid #F4E8DC;
-  padding: 0rem 0.5rem 0.25rem;
-  margin-top: 0.5rem;
-  background-color: #FDFBF9; }
-
 #img-portrait {
   display: flex;
   justify-content: center; }
@@ -195,23 +202,20 @@ img { max-width: 100%; }
   padding: 0.5rem;
   background-color: #F4E8DC; }
 
-.redir {
-  margin-left: 0.5rem;
-}
+.redir { margin-left: 0.25rem; }
 
-.toggleShow {
-  height: 20px; }
+.toggleShow { height: 20px; }
 
 /* ----- SKILLS ----- */
 /* Improve cursor for clickable items */
-.h6-subject-minor-missing-skills {
+.h6-subject-minor-skills {
   cursor: pointer;
   padding: 0rem 0;
   /* Optional: add some padding for better clickability */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.333s ease;
   /* Smooth transition for background change */ }
 /* Hide the <ul> elements by default, using opacity and max-height */
-.h6-subject-minor-missing-skills+ul {
+.h6-subject-minor-skills+ul {
   display: block;
   /* Maintain block display to preserve space */
   opacity: 0;
@@ -220,11 +224,11 @@ img { max-width: 100%; }
   /* Initially collapsed */
   overflow: hidden;
   /* Hide content that overflows */
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.333s ease, max-height 0.333s ease;
   /* Smooth transitions */ }
 /* Display the <ul> when the h6-subject is hovered or active */
-.h6-subject-minor-missing-skills:hover+ul,
-.h6-subject-minor-missing-skills.active+ul {
+.h6-subject-minor-skills:hover+ul,
+.h6-subject-minor-skills.active+ul {
   opacity: 1;
   /* Make it visible */
   max-height: 1000px;
