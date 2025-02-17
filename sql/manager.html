@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Finanze</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }
+        .container { width: 50%; margin: auto; background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, button { padding: 10px; margin: 5px; width: 80%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Gestione Finanze</h2>
+        <form action="gestione.php" method="post">
+            <input type="text" name="nome_conto" placeholder="Nome Conto" required><br>
+            <input type="number" step="0.01" name="saldo" placeholder="Saldo Iniziale" required><br>
+            <select name="tipo">
+                <option value="Banca">Banca</option>
+                <option value="Carta">Carta</option>
+                <option value="Contanti">Contanti</option>
+            </select><br>
+            <button type="submit">Aggiungi Conto</button>
+        </form>
+        
+        <h3>Lista Conti</h3>
+        <ul>
+            <?php
+            $conn = new mysqli('localhost', 'root', '', 'gestione_finanze');
+            if ($conn->connect_error) die("Connessione fallita: " . $conn->connect_error);
+            
+            $result = $conn->query("SELECT * FROM conti");
+            while ($row = $result->fetch_assoc()) {
+                echo "<li>{$row['nome_conto']} - {$row['saldo']} EUR ({$row['tipo']})</li>";
+            }
+            $conn->close();
+            ?>
+        </ul>
+    </div>
+</body>
+</html>
