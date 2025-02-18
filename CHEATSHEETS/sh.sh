@@ -1,8 +1,8 @@
 === Shell Script Syntax ===  
-#!/bin/bash                            # Definisce l'interprete (Bash in questo caso)  
+#!/bin/bash                             # Definisce l'interprete (Bash in questo caso)  
 echo "Hello, World!"                    # Stampa un messaggio sulla console  
 $variable = "value"                     # Assegna un valore a una variabile  
-$variable                              # Accede al valore di una variabile  
+$variable                               # Accede al valore di una variabile  
 $(command)                              # Esegue un comando e cattura il risultato  
 
 === Shell Variables ===  
@@ -16,18 +16,18 @@ if [ $x -eq 10 ]; then                  # Verifica se x è uguale a 10
   echo "x is 10"  
 elif [ $x -lt 10 ]; then                # Verifica se x è minore di 10  
   echo "x is less than 10"  
-else                                     # Condizione alternativa  
+else                                    # Condizione alternativa  
   echo "x is greater than 10"  
 fi  
 
 [ $x -eq 10 ] && echo "x is 10" || echo "x is not 10"  # Operatori logici AND/OR  
 
 === Shell Loops ===  
-for i in {1..5}; do                    # Ciclo for da 1 a 5  
+for i in {1..5}; do                     # Ciclo for da 1 a 5  
   echo $i  
 done  
 
-while [ $x -le 10 ]; do                # Ciclo while finché x è minore o uguale a 10  
+while [ $x -le 10 ]; do                 # Ciclo while finché x è minore o uguale a 10  
   echo $x  
   ((x++))                               # Incrementa x  
 done  
