@@ -35,7 +35,6 @@ CREATE TABLE transactions (
     account_id INT NOT NULL,
     category_id INT,
     amount DECIMAL(15,2) NOT NULL,
-    transaction_type ENUM('income', 'expense') NOT NULL,
     description TEXT,
     transaction_date DATE NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
