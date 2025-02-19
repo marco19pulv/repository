@@ -20,7 +20,7 @@ CREATE TABLE accounts (
     balance DECIMAL(15,2) NOT NULL DEFAULT 0.00,
     currency VARCHAR(10) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL
 );
 
 -- Categories table
