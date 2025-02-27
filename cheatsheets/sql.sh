@@ -25,10 +25,10 @@ LIMIT number                                   # Limita il numero di righe resti
 DISTINCT                                       # Restituisce solo valori unici  
 
 === SQL Joins ===  
-INNER JOIN table2 ON table1.column = table2.column;    # Restituisce le righe che hanno corrispondenza in entrambe le tabelle  
-LEFT JOIN table2 ON table1.column = table2.column;     # Restituisce tutte le righe dalla tabella di sinistra e le corrispondenze dalla tabella di destra  
-RIGHT JOIN table2 ON table1.column = table2.column;    # Restituisce tutte le righe dalla tabella di destra e le corrispondenze dalla tabella di sinistra  
-FULL OUTER JOIN table2 ON table1.column = table2.column; # Restituisce tutte le righe da entrambe le tabelle, con null dove non c'è corrispondenza  
+INNER JOIN table2 ON table1.column = table2.column;         # Restituisce le righe che hanno corrispondenza in entrambe le tabelle  
+LEFT JOIN table2 ON table1.column = table2.column;          # Restituisce tutte le righe dalla tabella di sinistra e le corrispondenze dalla tabella di destra  
+RIGHT JOIN table2 ON table1.column = table2.column;         # Restituisce tutte le righe dalla tabella di destra e le corrispondenze dalla tabella di sinistra  
+FULL OUTER JOIN table2 ON table1.column = table2.column;    # Restituisce tutte le righe da entrambe le tabelle, con null dove non c'è corrispondenza  
 
 === SQL Aggregate Functions ===  
 COUNT(column)                                   # Conta il numero di righe  
@@ -39,20 +39,20 @@ MAX(column)                                     # Trova il valore massimo di una
 
 === SQL Grouping ===  
 GROUP BY column                                 # Raggruppa i risultati per una colonna  
-HAVING condition                               # Filtra i risultati dopo il raggruppamento (usato con GROUP BY)  
+HAVING condition                                # Filtra i risultati dopo il raggruppamento (usato con GROUP BY)  
 
 === SQL Subqueries ===  
-SELECT * FROM table1 WHERE column IN (SELECT column FROM table2);  # Subquery che restituisce valori da un'altra query  
-SELECT * FROM table1 WHERE column = (SELECT column FROM table2 WHERE condition LIMIT 1);  # Subquery che restituisce un singolo valore  
+SELECT * FROM table1 WHERE column IN (SELECT column FROM table2);                           # Subquery che restituisce valori da un'altra query  
+SELECT * FROM table1 WHERE column = (SELECT column FROM table2 WHERE condition LIMIT 1);    # Subquery che restituisce un singolo valore  
 
 === SQL Modifying Data ===  
-INSERT INTO table_name (column1, column2) VALUES (value1, value2);   # Inserisce un nuovo record nella tabella  
-UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;  # Aggiorna i valori di un record esistente  
-DELETE FROM table_name WHERE condition;   # Elimina un record dalla tabella  
+INSERT INTO table_name (column1, column2) VALUES (value1, value2);          # Inserisce un nuovo record nella tabella  
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;   # Aggiorna i valori di un record esistente  
+DELETE FROM table_name WHERE condition;                                     # Elimina un record dalla tabella  
 
 === SQL Indexes ===  
 CREATE INDEX index_name ON table_name (column);    # Crea un indice su una colonna della tabella  
-DROP INDEX index_name;                            # Rimuove un indice  
+DROP INDEX index_name;                             # Rimuove un indice  
 
 === SQL Transactions ===  
 START TRANSACTION;                             # Inizia una transazione  
