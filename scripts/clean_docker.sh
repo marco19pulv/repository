@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-# Stop all running containers
+# Stop all running containerscd
 docker stop $(docker ps -aq)
 
 # Remove all containers
